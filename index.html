@@ -3,38 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nafees Khan | Professional Portfolio</title>
+    <title>Nafees Khan | Premium Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Base Styles */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        /* CSS Reset and General Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #0f172a; color: #e2e8f0; scroll-behavior: smooth; }
         
         /* Navigation */
-        nav { background: #2c3e50; color: white; padding: 1.2rem; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-around; align-items: center; }
-        nav .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; }
+        nav { background: rgba(15, 23, 42, 0.95); padding: 1.5rem; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1e293b; }
+        nav .logo { font-size: 1.5rem; font-weight: 700; color: #38bdf8; }
         nav ul { list-style: none; display: flex; }
-        nav ul li { margin: 0 15px; }
-        nav ul li a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
-        nav ul li a:hover { color: #3498db; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: #f8fafc; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+        nav ul li a:hover { color: #38bdf8; }
 
         /* Hero Section */
-        .hero { background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); height: 450px; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 25px; }
-        .cta-btn { background: #e74c3c; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1rem; }
+        .hero { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%); padding: 20px; }
+        .hero h1 { font-size: 4rem; color: #f8fafc; margin-bottom: 1rem; }
+        .hero span { color: #38bdf8; }
+        .hero p { font-size: 1.2rem; max-width: 700px; color: #94a3b8; margin-bottom: 2rem; }
+        .btn-main { background: #38bdf8; color: #0f172a; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+        .btn-main:hover { transform: scale(1.05); background: #0ea5e9; }
 
-        /* Content Sections */
-        .section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
-        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #2c3e50; position: relative; }
-        .section-title::after { content: ''; width: 60px; height: 3px; background: #3498db; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+        /* Section Styling */
+        section { padding: 100px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #38bdf8; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
-        .card h3 { margin-bottom: 15px; color: #3498db; }
+        /* Grid Layouts */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: #1e293b; padding: 40px; border-radius: 20px; border: 1px solid #334155; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); border-color: #38bdf8; }
+
+        /* About Me & Hobbies */
+        .about-box { background: #1e293b; padding: 40px; border-radius: 20px; line-height: 1.8; font-size: 1.1rem; }
+
+        /* Product Section */
+        .product-card { background: #1e293b; border-radius: 15px; overflow: hidden; border: 1px solid #334155; }
+        .product-img { width: 100%; height: 200px; background: #334155; display: flex; align-items: center; justify-content: center; }
+        .product-info { padding: 20px; }
+        .price { color: #38bdf8; font-size: 1.5rem; font-weight: 700; margin: 10px 0; }
+
+        /* Contact Section */
+        .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        form input, form textarea { width: 100%; padding: 15px; margin-bottom: 15px; background: #0f172a; border: 1px solid #334155; border-radius: 10px; color: white; }
+        .btn-whatsapp { background: #25d366; color: white; display: inline-block; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: 700; margin-top: 10px; }
 
         /* Footer */
-        footer { background: #2c3e50; color: white; text-align: center; padding: 40px 20px; margin-top: 40px; }
-        footer p { margin-bottom: 10px; }
+        footer { padding: 50px; text-align: center; border-top: 1px solid #1e293b; color: #64748b; }
+
+        /* Screen Reader Accessibility Hint */
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
     </style>
 </head>
 <body>
@@ -43,46 +62,74 @@
         <div class="logo">NAFEES KHAN</div>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <header class="hero" id="home">
-        <h1>Professional Excellence</h1>
-        <p>Creating modern, accessible, and high-performance digital experiences for a global audience.</p>
-        <a href="#contact" class="cta-btn">Get In Touch</a>
+        <h1>Hi, I am <span>Nafees Khan</span></h1>
+        <p>A Visionary Developer and Entrepreneur committed to delivering high-impact digital solutions and professional excellence.</p>
+        <a href="#contact" class="btn-main">Work With Me</a>
     </header>
 
-    <section class="section" id="services">
-        <h2 class="section-title">Professional Services</h2>
+    <section id="about">
+        <h2 class="section-title">About Me & My Passion</h2>
+        <div class="about-box">
+            <p>I am a dedicated professional focused on building modern web experiences. My journey is driven by innovation and the constant desire to solve complex problems through technology. I believe in clean code, accessible design, and professional integrity.</p>
+            <br>
+            <h3 style="color: #38bdf8;">My Hobbies</h3>
+            <p>Outside of my professional life, I am passionate about exploring new technologies, strategic gaming, and continuous learning. I enjoy analyzing digital trends and refining my skills in software architecture.</p>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2 class="section-title">My Featured Products</h2>
         <div class="grid">
-            <div class="card">
-                <h3>Web Development</h3>
-                <p>Building responsive and accessible websites using the latest standards and clean code architecture.</p>
+            <div class="product-card">
+                <div class="product-img">Product Image</div>
+                <div class="product-info">
+                    <h3>Digital Solution Pack</h3>
+                    <p>A complete set of tools for modern businesses.</p>
+                    <p class="price">$99.00</p>
+                    <a href="https://wa.me/923237234803" class="btn-main" style="padding: 10px 20px;">Buy Now</a>
+                </div>
             </div>
-            <div class="card">
-                <h3>UI/UX Design</h3>
-                <p>Focusing on user-centric designs that ensure a smooth and intuitive navigation experience for everyone.</p>
-            </div>
-            <div class="card">
-                <h3>Technical Consultation</h3>
-                <p>Providing expert advice on digital strategy and professional project management.</p>
+            <div class="product-card">
+                <div class="product-img">Product Image</div>
+                <div class="product-info">
+                    <h3>Premium Web Template</h3>
+                    <p>Ultra-responsive and SEO optimized design.</p>
+                    <p class="price">$49.00</p>
+                    <a href="https://wa.me/923237234803" class="btn-main" style="padding: 10px 20px;">Buy Now</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="contact">
-        <h2 class="section-title">Contact Information</h2>
-        <div style="text-align: center;">
-            <p>If you are looking for professional collaboration or have any inquiries, feel free to reach out.</p>
-            <p style="margin-top: 20px; font-weight: bold; color: #2c3e50;">Email: info@nafeeskhan.pro</p>
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-container">
+            <div>
+                <h3>Let's Talk</h3>
+                <p style="margin: 20px 0;">Feel free to reach out for collaborations or direct inquiries.</p>
+                <p><strong>Email:</strong> mlmncseven730s8@gmail.com</p>
+                <p><strong>Phone:</strong> +92 323 7234803</p>
+                <a href="https://wa.me/923237234803?text=Hello%20Nafees,%20I%20visited%20your%20website" class="btn-whatsapp">Message on WhatsApp</a>
+            </div>
+            <form action="https://formspree.io/f/mlmncseven730s8@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn-main" style="width: 100%; cursor: pointer;">Send Message</button>
+            </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Nafees Khan. All Rights Reserved.</p>
-        <p>Developed with a focus on Accessibility and Innovation.</p>
+        <p>&copy; 2026 Nafees Khan | Professional Excellence</p>
+        <p>Built for Accessibility and High Performance</p>
     </footer>
 
 </body>
